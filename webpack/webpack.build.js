@@ -19,10 +19,10 @@ module.exports = {
         modulesDirectories: ["node_modules"]
     },
     plugins: [
-        new CopyWebpackPlugin([
-            { from: 'node_modules/dd-ui/dist/fonts/dd-icon-font.woff', to: 'fonts' },
-            { from: 'node_modules/dd-ui/dist/fonts/dd-icon-font.ttf', to: 'fonts' },
-        ]),
+        // new CopyWebpackPlugin([
+        //     { from: 'node_modules/dd-ui/dist/fonts/dd-icon-font.woff', to: 'fonts' },
+        //     { from: 'node_modules/dd-ui/dist/fonts/dd-icon-font.ttf', to: 'fonts' },
+        // ]),
         new webpack.optimize.UglifyJsPlugin({
             warning: false,
             mangle: true,
