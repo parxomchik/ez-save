@@ -16,7 +16,8 @@
     "commit": "git-cz",
     "build": "webpack --config webpack/webpack.build.js --NODE_ENV=production",
     "start": "webpack --config webpack/webpack.dev.js --watch --NODE_ENV=dev",
-    "test": "karma start --NODE_ENV=test"
+    "test": "karma start --NODE_ENV=test",
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "angular": "1.5.8",
