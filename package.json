@@ -18,7 +18,9 @@
     "start": "webpack --config webpack/webpack.dev.js --watch --NODE_ENV=dev",
     "test": "karma start --NODE_ENV=test",
     "postinstall": "npm run build",
-    "preinstall": "npm i webpack"
+    "preinstall": "npm i webpack",
+    "heroku-prebuild": "export NPM_CONFIG_PRODUCTION=false; export NODE_ENV=; NPM_CONFIG_PRODUCTION=false NODE_ENV=development npm install --only=dev --dev",
+    "heroku-postbuild": "export NPM_CONFIG_PRODUCTION=true; export NODE_ENV=production;"
   },
   "dependencies": {
     "angular": "1.5.8",
@@ -33,14 +35,7 @@
     "bootstrap": "^3.3.7",
     "normalize.css": "~5.0.0",
     "reddit.js": "^0.1.4",
-    "string-replace-loader": "~1.0.5",
-    "webpack": "^1.13.1",
-    "html-webpack-plugin": "2.17.0",
-    "browser-sync-webpack-plugin": "1.0.1",
-    "compression-webpack-plugin": "0.3.1",
-    "copy-webpack-plugin": "~4.0.1",
-    "ng-annotate-webpack-plugin": "~0.1.3",
-    "wallaby-webpack": "0.0.22"
+    "string-replace-loader": "~1.0.5"
   },
   "devDependencies": {
     "@types/angular": "^1.5.7",
@@ -55,6 +50,9 @@
     "babel-core": "6.9.0",
     "babel-istanbul": "0.8.0",
     "browser-sync": "2.12.8",
+    "browser-sync-webpack-plugin": "1.0.1",
+    "compression-webpack-plugin": "0.3.1",
+    "copy-webpack-plugin": "~4.0.1",
     "css-loader": "0.23.1",
     "cz-conventional-changelog": "~1.2.0",
     "file-loader": "0.8.5",
@@ -62,6 +60,7 @@
     "gulp": "^3.9.0",
     "gulp-if": "^2.0.0",
     "gulp-template": "~4.0.0",
+    "html-webpack-plugin": "2.17.0",
     "i": "~0.3.5",
     "istanbul": "0.4.3",
     "istanbul-instrumenter-loader": "0.2.0",
@@ -78,6 +77,7 @@
     "less": "~2.7.1",
     "less-loader": "~2.2.3",
     "ng-annotate-loader": "~0.2.0",
+    "ng-annotate-webpack-plugin": "~0.1.3",
     "npm": "~3.10.9",
     "phantomjs-polyfill": "0.0.2",
     "phantomjs-prebuilt": "2.1.7",
@@ -87,7 +87,8 @@
     "ts-loader": "^2.2.2",
     "tslint": "^5.5.0",
     "typescript": "~2.3.0",
-    "url-loader": "0.5.7"
+    "url-loader": "0.5.7",
+    "wallaby-webpack": "0.0.22",
   },
   "config": {
     "commitizen": {
