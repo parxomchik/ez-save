@@ -44,7 +44,6 @@
     "@types/angular-translate": "^2.15.1",
     "@types/angular-ui-router": "^1.1.37",
     "@types/jasmine": "^2.5.53",
-    "dd-ui": "0.0.6",
     "babel-core": "6.9.0",
     "babel-istanbul": "0.8.0",
     "browser-sync": "2.12.8",
