@@ -5,6 +5,10 @@
   "license": "ISC",
   "author": "Dmitriy Parkhomenko",
   "main": "/",
+  "engines": {
+    "node": "8.9.4",
+    "npm": "5.0.3"
+  },
   "repository": {
     "type": "git"
   },
