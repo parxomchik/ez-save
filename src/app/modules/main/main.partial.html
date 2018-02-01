@@ -1,0 +1,31 @@
+<div class="container main">
+	<div class="row">
+		<form name="redditForm" ng-submit="vm.searchPosts(vm.query)">
+			<div class="form-group">
+				<label for="search">Reddit search</label>
+				<div class="inner-addon right-addon">
+					<i class="glyphicon glyphicon-search" ng-click="vm.searchPosts(vm.query)"></i>
+					<input type="text" class="form-control" id="search" placeholder="Type topic" ng-model="vm.query">
+				</div>
+			</div>
+		</form>
+		<div class="row main__thumbnail">
+			<span ng-if="vm.spinner" us-spinner></span>
+			<div class="main__thumbnail__block" ng-repeat="post in vm.searchResults.children track by $index">
+				<a ng-href="{{ ::post.data.preview.images[0].source.url }}" target="_blank" class="thumbnail main__thumbnail__block-image-container">
+					<div class="caption">
+						<h4 ng-bind="::post.data.title"></h4>
+					</div>
+					<img class="main__thumbnail__block-image" ng-src="{{ post.data.preview.images[0].source.url || post.data.thumbnail }}" alt="{{ post.data.title }}">
+					<p class="main__thumbnail__block" ng-if="!post.data.preview.images">No Image</p>
+				</a>
+			</div>
+			<div ng-if="vm.searchResults && !vm.searchResults.children.length">
+				No results
+			</div>
+			<div ng-if="vm.error">
+				<span ng-bind="vm.error"></span>
+			</div>
+		</div>
+	</div>
+</div>
