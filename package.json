@@ -14,7 +14,7 @@
   },
   "scripts": {
     "commit": "git-cz",
-    "build": "webpack --config webpack/webpack.build.js --NODE_ENV=production",
+    "build": "webpack --config webpack/webpack.build.js",
     "start": "webpack --config webpack/webpack.dev.js --watch --NODE_ENV=dev",
     "test": "karma start --NODE_ENV=test",
     "postinstall": "npm run build",
