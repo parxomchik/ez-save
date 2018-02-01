@@ -18,7 +18,7 @@
     "start": "webpack --config webpack/webpack.dev.js --watch --NODE_ENV=dev",
     "test": "karma start --NODE_ENV=test",
     "postinstall": "npm run build",
-    "preinstall": "npm i -g webpack"
+    "preinstall": "npm i webpack"
   },
   "dependencies": {
     "angular": "1.5.8",
@@ -33,7 +33,8 @@
     "bootstrap": "^3.3.7",
     "normalize.css": "~5.0.0",
     "reddit.js": "^0.1.4",
-    "string-replace-loader": "~1.0.5"
+    "string-replace-loader": "~1.0.5",
+    "webpack": "^1.13.1"
   },
   "devDependencies": {
     "@types/angular": "^1.5.7",
@@ -87,7 +88,6 @@
     "typescript": "~2.3.0",
     "url-loader": "0.5.7",
     "wallaby-webpack": "0.0.22",
-    "webpack": "^1.13.1"
   },
   "config": {
     "commitizen": {
