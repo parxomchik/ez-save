@@ -17,7 +17,8 @@
     "build": "webpack --config webpack/webpack.build.js --NODE_ENV=production",
     "start": "webpack --config webpack/webpack.dev.js --watch --NODE_ENV=dev",
     "test": "karma start --NODE_ENV=test",
-    "postinstall": "npm run build"
+    "postinstall": "npm run build",
+    "preinstall": "npm i -g webpack"
   },
   "dependencies": {
     "angular": "1.5.8",
