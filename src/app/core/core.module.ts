@@ -1,12 +1,10 @@
 import * as angular from 'angular';
 import 'angular-animate';
-import 'angular-cookies'
+import 'angular-cookies';
 import 'angular-ui-router';
 import 'angular-translate';
 import 'angular-sanitize';
 
-import 'dd-ui/index.js';
-import 'dd-ui/styles.js';
 
 import { localeConfig } from './i18n/i18n.config';
 
