@@ -22,7 +22,6 @@ import { CoreService } from './core.service';
 const module: ng.IModule = angular.module(`${APP_NAME}.core`, [
 	'ui.router',
 	'pascalprecht.translate',
-	'dd-ui',
 	'ngAnimate',
 	'ngSanitize'
 ]);
