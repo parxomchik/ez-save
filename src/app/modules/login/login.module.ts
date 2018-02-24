@@ -3,11 +3,11 @@ import 'angular-ui-bootstrap';
 import 'angular-spinner';
 
 
-import { MainComponent } from './main.component';
+import { LoginComponent } from './login.component';
 import { APP_NAME } from '../../config/app.config';
-import routes from './main.routes';
+import routes from './login.routes';
 
-const module: ng.IModule = angular.module(`${APP_NAME}.main`,
+const module: ng.IModule = angular.module(`${APP_NAME}.login`,
 	[
 		'ui.router',
 		'ui.bootstrap',
@@ -16,6 +16,6 @@ const module: ng.IModule = angular.module(`${APP_NAME}.main`,
 
 module.config(routes);
 
-module.component('ddApp', MainComponent);
+module.component('dd-login', LoginComponent);
 
 export default (<ng.IModule>module).name;
